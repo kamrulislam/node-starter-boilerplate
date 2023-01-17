@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test-commitlint": "npx commitlint --from HEAD~1 --to HEAD --verbose",
+    "lint": "eslint . --ext .ts",
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/index.js",
     "start:dev": "npx nodemon",
@@ -16,6 +18,9 @@
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
     "husky": "^8.0.3",
     "nodemon": "^2.0.20",
     "rimraf": "^4.1.0",
